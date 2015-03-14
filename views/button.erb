@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Big Fat Deploy Button</title>
+  </head>
+  <body>
+    <form action="/unblock" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= session[:csrf] %>"/>
+      <button class="big-red-button">Deploy!</button>
+    </form>
+  </body>
+</html>
