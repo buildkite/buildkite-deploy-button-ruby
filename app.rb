@@ -15,7 +15,7 @@ set :buildkite_access_token, ENV['BUILDKITE_ACCESS_TOKEN'] || raise("no BUILDKIT
 set :buildkite_api_host, ENV['BUILDKITE_API_HOST'] || 'https://api.buildkite.com'
 
 # SSL redirecter - must be the first piece of middleware
-use Rack::SslEnforcer
+use Rack::SslEnforcer unless development?
 
 # JSON request body parsing
 use Rack::Parser
@@ -24,7 +24,7 @@ use Rack::Parser
 use(Rack::Auth::Basic, "Restricted Area") {|u, p| u == settings.secret and p == ''}
 
 # CSRF protection
-set :session_secret, ENV['SESSION_SECRET']
+enable :sessions
 set :protection, use: [:authenticity_token]
 
 # State
