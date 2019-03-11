@@ -4,20 +4,20 @@ GEM
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     multipart-post (2.0.0)
-    mustermann (1.0.2)
+    mustermann (1.0.3)
     puma (3.11.3)
-    rack (2.0.4)
+    rack (2.0.6)
     rack-parser (0.7.0)
       rack
-    rack-protection (2.0.1)
+    rack-protection (2.0.5)
       rack
     rack-ssl-enforcer (0.2.9)
-    sinatra (2.0.1)
+    sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.1)
+      rack-protection (= 2.0.5)
       tilt (~> 2.0)
-    tilt (2.0.8)
+    tilt (2.0.9)
 
 PLATFORMS
   ruby
@@ -30,4 +30,4 @@ DEPENDENCIES
   sinatra
 
 BUNDLED WITH
-   1.16.1
+   1.17.1
